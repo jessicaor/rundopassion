@@ -62,7 +62,9 @@ class RandoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $rando = Rando::find($id);
+        /*$this->authorize('update', $article);*/
+        return view('randos.edit',[ 'rando' => $rando]);
     }
 
     /**
@@ -72,9 +74,14 @@ class RandoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RandoStore $request, $id)
     {
-        //
+        $rando = Rando::find($id);
+        /*$this->authorize('update', $article);*/
+        $rando->update($request->all());
+        $rando->save();
+        session()->flash('status','Rando modifié avec succès');
+        return redirect('/randos/create');
     }
 
     /**

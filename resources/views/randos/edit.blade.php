@@ -14,9 +14,10 @@
                         </div>
                     @endif
 
-                    <form class="py-5 px-5" action="/randos/store" method="post">
+                    <form class="py-5 px-5" action="/randos/{{$rando->id}}" method="post">
                     {{csrf_field() }}
-                    
+                    {{method_field('PUT')}}
+
                     <div class="form-group">
                         <label for="InputName">Title</label>
                         <input type="text" class="form-control {{$errors->has('title')?'is-invalid': ''}}" name ="title" id="InputTitle" placeholder="Title" value="{{old('title')}}">
@@ -27,15 +28,15 @@
                     </div>-->
                     <div class="form-group">
                         <label for="InputName">Date</label>
-                        <input type="text" class="form-control {{$errors->has('date')?'is-invalid': ''}}" name ="date" id="InputTitle" placeholder="Date" value="">
+                        <input type="text" class="form-control {{$errors->has('date')?'is-invalid': ''}}" name ="date" id="InputTitle" placeholder="Date" value="{{$rando->date}}">
                     </div>     
                     <div class="form-group">
                         <label for="InputName">Heure</label>
-                        <input type="text" class="form-control {{$errors->has('heure')?'is-invalid': ''}}" name ="heure" id="InputTitle" placeholder="Heure" value="">h
+                        <input type="text" class="form-control {{$errors->has('heure')?'is-invalid': ''}}" name ="heure" id="InputTitle" placeholder="Heure" value="{{$rando->heure}}">h
                     </div>               
                     <div class="form-group">
                         <label for="InputName">Distance</label>
-                        <input type="text" class="form-control {{$errors->has('distance')?'is-invalid': ''}}" name ="distance" id="InputTitle" placeholder="Distance" value="">km
+                        <input type="text" class="form-control {{$errors->has('distance')?'is-invalid': ''}}" name ="distance" id="InputTitle" placeholder="Distance" value="{{$rando->distance}}">km
                     </div>               
 
                     <div class="form-group">
@@ -48,7 +49,7 @@
                     </div>
 
                     <div class="text-center pt-5">
-                        <button id ="bouton_envoi" type="submit" name="bouton" onclick="" value ="Add" class="ok btn btn-lg btn-danger">Create</button>
+                        <button id ="bouton_envoi" type="submit" name="bouton" onclick="" value ="Add" class="ok btn btn-lg btn-danger">Modifier</button>
                     </div>
                     
                     @if($errors->has('title'))
