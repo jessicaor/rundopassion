@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Bienvenue</div>
+            
+                <div class="cont text-center"><h2 class="title_rundo">Contact</h2></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,8 +14,8 @@
                         </div>
                     @endif
 
-                    Vous êtes connectés!
-                </div>
+                    
+               
             </div>
         </div>
     </div>

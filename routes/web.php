@@ -15,9 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/contact', function () {
+    return view('/layouts/contact');
+});
+
+Route::get('/rundopassion', function () {
+    return view('/layouts/rundopassion');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 /*Route::get('admin/routes', 'HomeController@admin')->middleware('admin');*/
 
 Route::get('/randos/create', 'RandoController@create')->name('rando_create')->middleware('auth');

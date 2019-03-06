@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>RundoPassion</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -85,10 +85,10 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Présentation</a>
+                    <a href="/rundopassion">Présentation</a>
                     <a href="/randos/index">Randos</a>
-                    <a href="https://laravel-news.com">Contact</a>
-                    <a href="https://nova.laravel.com">Nova</a>
+                    <a href="/contact">Contact</a>
+                    
                 </div>
             </div>
         </div>
