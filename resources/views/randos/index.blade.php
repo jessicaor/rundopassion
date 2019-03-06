@@ -18,9 +18,22 @@
     <p>{{$rando->distance}}km</p>
     <p>{{$rando->description}}</p></ul>
 
-    <div class="text-center col-sm-6">
-    <a href="/randos/{{ $rando->id }}/edit" class="editbut">edit</a>
+    <div class="text-center col-sm-2">
+        @can('update', $rando)
+    <a href="/randos/{{ $rando->id }}/edit" class="editbut">modifier</a>
+    @endcan
     </div>
+
+    <!--<div class="text-center col-sm-2">-->
+    {{method_field('DELETE')}}
+    <!--<a href="" class="destroybut" value="delete" name="_method" type="hidden">Supprimer</a>
+    </div>-->
+
+
+    <div class="text-center col-sm-2">
+    <a href="/inscrits/create" class="editbut">S'inscrire</a>
+    </div>
+
     </div>
     @endforeach
 </div>

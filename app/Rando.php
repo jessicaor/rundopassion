@@ -11,5 +11,9 @@ class Rando extends Model
         'title', 'date','heure','distance','description'
         ];
 
+       /* public function inscrits(){
+                return $this->hasMany(Inscrit::class);
+            }*/
+        
 
 }

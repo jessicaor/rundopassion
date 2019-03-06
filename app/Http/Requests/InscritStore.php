@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests;
 
-use App\Http\Requests\RandoStore;
+use App\Http\Requests\InscritStore;
 use Illuminate\Foundation\Http\FormRequest;
 
-class RandoStore extends FormRequest
+class InscritStore extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,12 +25,11 @@ class RandoStore extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|min:4|string',
-            'date' => 'required',
-            'heure' => 'required|min:1|integer',
-            'distance' => 'required|min:1|integer',
-            'description' => 'required|min:10|string',
-            'state' =>'boolean'
+            
+                'name' => 'required|min:2|string',
+                'firstname' => 'required|min:2|string',
+                'age' => 'required|integer',
+                'phone' => 'required'
         ];
     }
 }

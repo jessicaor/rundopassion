@@ -25,7 +25,9 @@ class RandoController extends Controller
      */
     public function create()
     {
+        $this->authorize('create', Rando::class);
         return view('randos/create');
+
     }
 
     /**
@@ -36,6 +38,7 @@ class RandoController extends Controller
      */
     public function store(RandoStore $request)
     {
+        $this->authorize('store', Rando::class);
         $rando = new Rando($request->all()); //optimiser pour recuperer ts les input ds formulaire
         $rando->user_id = $request->user()->id;//associer 1 article a 1 auteur
         $rando->save();//je dis a laravel de sauvegarder
@@ -63,6 +66,8 @@ class RandoController extends Controller
     public function edit($id)
     {
         $rando = Rando::find($id);
+        $this->authorize('update', $rando);
+        
         /*$this->authorize('update', $article);*/
         return view('randos.edit',[ 'rando' => $rando]);
     }
@@ -77,6 +82,7 @@ class RandoController extends Controller
     public function update(RandoStore $request, $id)
     {
         $rando = Rando::find($id);
+        $this->authorize('update', $rando);
         /*$this->authorize('update', $article);*/
         $rando->update($request->all());
         $rando->save();
@@ -92,6 +98,11 @@ class RandoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        /*$rando = Rando::find($id);
+        $rando->destroy();
+        $request->session()->flash('message', 'Rando supprimée!');
+        return redirect('/randos/index');*/
+       
+   
     }
 }

@@ -27,7 +27,7 @@
                     </div>-->
                     <div class="form-group">
                         <label for="InputName">Date</label>
-                        <input type="text" class="form-control {{$errors->has('date')?'is-invalid': ''}}" name ="date" id="InputTitle" placeholder="Date" value="">
+                        <input type="date" class="form-control {{$errors->has('date')?'is-invalid': ''}}" name ="date" id="InputTitle" placeholder="Date" value="">
                     </div>     
                     <div class="form-group">
                         <label for="InputName">Heure</label>
