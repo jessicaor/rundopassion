@@ -13,8 +13,8 @@ class UsersSeeder extends Seeder
     {
        $admin = \App\User::create([
            'name'=>'admin',
-           'email'=>'bububu@bu.bu',
-           'password'=>bcrypt('oooooo')
+           'email'=>'trrry.rrun@gmail.com',
+           'password'=>bcrypt('han0nyw0u5')
        ]);
 
        $visiter = \App\User::create([

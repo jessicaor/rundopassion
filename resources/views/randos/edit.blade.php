@@ -19,7 +19,7 @@
                     {{method_field('PUT')}}
 
                     <div class="form-group">
-                        <label for="InputName">Title</label>
+                        <label for="InputName">Titre</label>
                         <input type="text" class="form-control {{$errors->has('title')?'is-invalid': ''}}" name ="title" id="InputTitle" placeholder="Title" value="{{old('title')}}">
                     </div>               
                     <!--<div class="form-group">
@@ -27,20 +27,20 @@
                         <input type="email" class="form-control " name ="mail" id="InputEmail" aria-describedby="emailHelp" placeholder="Votre email">
                     </div>-->
                     <div class="form-group">
-                        <label for="InputName">Date</label>
+                        <label for="InputName">Date*</label>
                         <input type="date" class="form-control {{$errors->has('date')?'is-invalid': ''}}" name ="date" id="InputTitle" placeholder="Date" value="{{$rando->date}}">
                     </div>     
                     <div class="form-group">
-                        <label for="InputName">Heure</label>
+                        <label for="InputName">Heure*</label>
                         <input type="text" class="form-control {{$errors->has('heure')?'is-invalid': ''}}" name ="heure" id="InputTitle" placeholder="Heure" value="{{$rando->heure}}">h
                     </div>               
                     <div class="form-group">
-                        <label for="InputName">Distance</label>
+                        <label for="InputName">Distance*</label>
                         <input type="text" class="form-control {{$errors->has('distance')?'is-invalid': ''}}" name ="distance" id="InputTitle" placeholder="Distance" value="{{$rando->distance}}">km
                     </div>               
 
                     <div class="form-group">
-                        <label for="FormControlTextarea">Description</label>
+                        <label for="FormControlTextarea">Description*</label>
                         <textarea type="text" class="form-control " id="FormControlTextarea" rows="5" name="description"></textarea>
                     </div>
                     <div class="form-check">

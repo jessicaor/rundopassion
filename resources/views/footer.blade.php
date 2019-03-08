@@ -1,5 +1,6 @@
+
 <div class="container-fluid">
-<footer class="foot bg-light">
-    <p class="copy">copyright</p>
+<footer class="foot">
+    <p class="copy pt-5">copyright</p>
 </footer>
 </div>

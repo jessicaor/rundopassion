@@ -6,13 +6,15 @@
 
         <title>RundoPassion</title>
 
+        <!--css_js_animation-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #83c58f;
+                /*background-color: #83c58f;*/
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -68,7 +70,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">Accueil</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -80,17 +82,26 @@
             @endif
 
             <div class="content">
+            <img src="/images/rundo_logo_thumb.png" alt="logo_rundopassion" class="">
                 <div class="title m-b-md">
                     RundoPassion
                 </div>
 
-                <div class="links">
-                    <a href="/rundopassion">Présentation</a>
-                    <a href="/randos/index">Randos</a>
-                    <a href="/contact">Contact</a>
+                <!--nav_landing_page-->
+                <div class="links"  data-aos="fade-down">
+                    <a href="/rundopassion" class="welcome_link">Présentation</a>
+                    <a href="/randos/index" class="welcome_link">Randonnées</a>
+                    <a href="/contact" class="welcome_link">Contact</a>
                     
                 </div>
             </div>
         </div>
+        <!--css_js_animation-->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+        AOS.init();
+        </script>
     </body>
 </html>
+
+

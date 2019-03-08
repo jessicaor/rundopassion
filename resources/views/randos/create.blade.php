@@ -18,7 +18,7 @@
                     {{csrf_field() }}
                     
                     <div class="form-group">
-                        <label for="InputName">Title</label>
+                        <label for="InputName">Title*</label>
                         <input type="text" class="form-control {{$errors->has('title')?'is-invalid': ''}}" name ="title" id="InputTitle" placeholder="Title" value="{{old('title')}}">
                     </div>               
                     <!--<div class="form-group">
@@ -26,29 +26,29 @@
                         <input type="email" class="form-control " name ="mail" id="InputEmail" aria-describedby="emailHelp" placeholder="Votre email">
                     </div>-->
                     <div class="form-group">
-                        <label for="InputName">Date</label>
+                        <label for="InputName">Date*</label>
                         <input type="date" class="form-control {{$errors->has('date')?'is-invalid': ''}}" name ="date" id="InputTitle" placeholder="Date" value="">
                     </div>     
                     <div class="form-group">
-                        <label for="InputName">Heure</label>
+                        <label for="InputName">Heure*</label>
                         <input type="text" class="form-control {{$errors->has('heure')?'is-invalid': ''}}" name ="heure" id="InputTitle" placeholder="Heure" value="">h
                     </div>               
                     <div class="form-group">
-                        <label for="InputName">Distance</label>
+                        <label for="InputName">Distance*</label>
                         <input type="text" class="form-control {{$errors->has('distance')?'is-invalid': ''}}" name ="distance" id="InputTitle" placeholder="Distance" value="">km
                     </div>               
 
                     <div class="form-group">
-                        <label for="FormControlTextarea">Description</label>
+                        <label for="FormControlTextarea">Description*</label>
                         <textarea type="text" class="form-control " id="FormControlTextarea" rows="5" name="description"></textarea>
                     </div>
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="check" name="published">
-                        <label class="form-check-label" for="check">published</label>
+                        <label class="form-check-label" for="check">publier</label>
                     </div>
 
                     <div class="text-center pt-5">
-                        <button id ="bouton_envoi" type="submit" name="bouton" onclick="" value ="Add" class="ok btn btn-lg btn-danger">Create</button>
+                        <button id ="bouton_envoi" type="submit" name="bouton" onclick="" value ="Add" class="ok btn btn-lg btn-danger">Créer</button>
                     </div>
                     
                     @if($errors->has('title'))

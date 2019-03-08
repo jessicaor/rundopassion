@@ -18,7 +18,7 @@
                     {{csrf_field() }}
                     
                     <div class="form-group">
-                        <label for="InputName">Nom</label>
+                        <label for="InputName">Nom*</label>
                         <input type="text" class="form-control {{$errors->has('name')?'is-invalid': ''}}" name ="name" id="InputTitle" placeholder="Title" value="">
                     </div>               
                     <!--<div class="form-group">
@@ -26,15 +26,15 @@
                         <input type="email" class="form-control " name ="mail" id="InputEmail" aria-describedby="emailHelp" placeholder="Votre email">
                     </div>-->
                     <div class="form-group">
-                        <label for="InputName">Prenom</label>
+                        <label for="InputName">Prenom*</label>
                         <input type="texte" class="form-control {{$errors->has('firstname')?'is-invalid': ''}}" name ="firstname" id="InputTitle" placeholder="Prenom" value="">
                     </div>     
                     <div class="form-group">
-                        <label for="InputName">Age</label>
+                        <label for="InputName">Age*</label>
                         <input type="text" class="form-control {{$errors->has('age')?'is-invalid': ''}}" name ="age" id="InputTitle" placeholder="Age" value="">ans
                     </div>               
                     <div class="form-group">
-                        <label for="InputName">Téléphone</label>
+                        <label for="InputName">Téléphone*</label>
                         <input type="text" class="form-control {{$errors->has('phone')?'is-invalid': ''}}" name ="phone" id="InputTitle" placeholder="Telephone" value="">
                     </div>               
 

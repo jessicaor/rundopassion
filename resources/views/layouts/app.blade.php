@@ -13,6 +13,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
@@ -22,10 +23,10 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'RundoPassion') }}
+                <img src="/images/rundo_logo_thumb.png" alt="logo_rundopassion" class="rundo_logo">
                 </a>
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -53,8 +54,8 @@
                         @else
                                                    
                           
-
-                            <li><a class="nav-link" href="{{ url('/randos/index') }}">{{ __('Randos') }}</a></li>
+                            <li><a class="nav-link" href="{{ url('rundopassion') }}">{{ __('Rundopassion') }}</a></li>
+                            <li><a class="nav-link" href="{{ url('/randos/index') }}">{{ __('Randonnées') }}</a></li>
                             <li><a class="nav-link" href="{{ url('/contact') }}">{{ __('Contact') }}</a></li>
 
                             <li class="nav-item dropdown">

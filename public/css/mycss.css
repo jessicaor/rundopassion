@@ -1,20 +1,28 @@
-
-.foot{
-    padding:0;
-    margin:0;
-    position: fixed;
-    bottom: 0;
-    height: 5%;
-    width: 100%;
+.navbar{
+    background-color:#ba9077;
 }
-
-.copy{
-    padding-left:15%;   
-}
-
-
 .rundo{
 text-align: center;
+}
+
+.rundo_logo{
+    width:40%;
+    height:40%;
+}
+
+/****welcome****/
+/****index****/
+.title_index_icon{
+    width:10%;
+    height:10%;
+}
+.index_icon{
+    width:15%;
+    height:15%;
+}
+
+.infos_title{
+    font-size:2rem;
 }
 
 /*body {
@@ -31,11 +39,36 @@ text-align:center;
 
 .title_rundo{
     font-size:3rem;
-}
-
-.title_rundo{
-    color:
     padding-top:5%;
     padding-bottom:10%;
 }
+
+/***contact***/
+.icon{
+    width:5%;
+    height:5%;
+    padding-top:3%;
+}
+.paracont{
+    font-size:1.5rem;
+}
+
+/***FOOTER***/
+.foot{
+    left:0%;
+    padding:0;
+    margin:0;
+    position: fixed;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    background-color:#ba9077;
+}
+
+.copy{
+    padding-left:15%;   
+}
+
+
+
 
